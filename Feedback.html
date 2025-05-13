@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reclamação de Ônibus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .checkbox-group {
+      margin-top: 0.5rem;
+    }
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+    }
+    .checkbox-group input {
+      width: auto;
+      margin-right: 0.5rem;
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      display: none;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .message {
+      margin-top: 1rem;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Reclamação </h1>
+  <form id="reclamacaoForm">
+    <label for="dataHora">Data e hora da ocorrência</label>
+    <input type="datetime-local" id="dataHora" name="dataHora">
+
+    <label for="numeroOnibus">Número do ônibus</label>
+    <input type="number" id="numeroOnibus" name="numeroOnibus" required>
+    <div class="error" id="erroNumeroOnibus">Campo obrigatório.</div>
+
+    <label for="linhaOnibus">Linha do ônibus</label>
+    <select id="linhaOnibus" name="linhaOnibus" required>
+      <option value="">Selecione uma linha</option>
+      <option value="T401 - Cohab / São Cristóvão">T401 - Cohab / São Cristóvão</option>
+      <option value="T402 - Santa Maria / Centro">T402 - Santa Maria / Centro</option>
+      <option value="T403 - Bugio / Siqueira Campos">T403 - Bugio / Siqueira Campos</option>
+    </select>
+    <div class="error" id="erroLinhaOnibus">Campo obrigatório.</div>
+
+    <label>Tipo de Reclamação</label>
+    <div class="checkbox-group" id="tipoReclamacoes">
+      <label><input type="checkbox" name="tipo[]" value="Atraso excessivo"> Atraso excessivo</label>
+      <label><input type="checkbox" name="tipo[]" value="Ônibus lotado demais"> Ônibus lotado demais</label>
+      <label><input type="checkbox" name="tipo[]" value="Falta de acessibilidade"> Falta de acessibilidade</label>
+      <label><input type="checkbox" name="tipo[]" value="Ar-condicionado quebrado"> Ar-condicionado quebrado</label>
+      <label><input type="checkbox" name="tipo[]" value="Motorista com má conduta"> Motorista com má conduta</label>
+      <label><input type="checkbox" name="tipo[]" value="Mudança inesperada no trajeto"> Mudança inesperada no trajeto</label>
+      <label><input type="checkbox" name="tipo[]" value="Veículo sujo ou mal conservado"> Veículo sujo ou mal conservado</label>
+      <label>Outras: <input type="text" name="outras"></label>
+    </div>
+    <div class="error" id="erroTipo">Selecione pelo menos uma opção.</div>
+
+    <label for="embarque">Ponto ou região onde você embarcou</label>
+    <input type="text" id="embarque" name="embarque" required>
+    <div class="error" id="erroEmbarque">Campo obrigatório.</div>
+
+    <label for="ocorrencia">Ponto ou região onde ocorreu o problema</label>
+    <input type="text" id="ocorrencia" name="ocorrencia" required>
+    <div class="error" id="erroOcorrencia">Campo obrigatório.</div>
+
+    <label for="comentario">Comentário (opcional)</label>
+    <textarea id="comentario" name="comentario" maxlength="300" rows="4"></textarea>
+
+    <button type="submit">Enviar Reclamação</button>
+    <div class="message" id="mensagem"></div>
+  </form>
+
+  <script>
+    document.getElementById('dataHora').value = new Date().toISOString().slice(0, 16);
+
+    document.getElementById('reclamacaoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      let valido = true;
+      const numeroOnibus = document.getElementById('numeroOnibus');
+      const linhaOnibus = document.getElementById('linhaOnibus');
+      const embarque = document.getElementById('embarque');
+      const ocorrencia = document.getElementById('ocorrencia');
+      const checkboxes = document.querySelectorAll('input[name="tipo[]"]:checked');
+
+      // Reset errors
+      document.querySelectorAll('.error').forEach(el => el.style.display = 'none');
+
+      if (!numeroOnibus.value) {
+        document.getElementById('erroNumeroOnibus').style.display = 'block';
+        valido = false;
+      }
+
+      if (!linhaOnibus.value) {
+        document.getElementById('erroLinhaOnibus').style.display = 'block';
+        valido = false;
+      }
+
+      if (checkboxes.length === 0) {
+        document.getElementById('erroTipo').style.display = 'block';
+        valido = false;
+      }
+
+      if (!embarque.value) {
+        document.getElementById('erroEmbarque').style.display = 'block';
+        valido = false;
+      }
+
+      if (!ocorrencia.value) {
+        document.getElementById('erroOcorrencia').style.display = 'block';
+        valido = false;
+      }
+
+      if (!valido) return;
+
+      document.getElementById('mensagem').textContent =
+        'Obrigado por colaborar com a melhoria do transporte público. Sua contribuição será encaminhada à empresa responsável e à SMTT para análise.';
+
+      this.reset();
+      document.getElementById('dataHora').value = new Date().toISOString().slice(0, 16);
+    });
+  </script>
+</body>
+</html>
