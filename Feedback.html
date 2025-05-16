@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <link rel="stylesheet" href="styles/news.css">
+
+  <script src="scripts/feedback.js" defer> </script>
+  <link rel="icon" type="image/png" href="assets/logo/favicon.ico">
+  <title>Feedback dos Coletivos - Connectilha</title>
+</head>
+
+<body>
+  <div class="form-container">
+    <a class="navbar-brand" href="SingleTicket.html">
+      <img src="assets/logo/Connectilha_banner.png" alt="Logo Connectilha" class="logo">
+    </a>
+
+    <h1 class="text-center mb-4">O que houve de errado? Pode contar conosco!</h1>
+
+    <form id="formReclamacao">
+      <div class="mb-3">
+        <label for="numeroOnibus" class="form-label">Qual o número do ônibus?</label>
+        <input type="number" class="form-control" id="numeroOnibus" name="numeroOnibus" required min="1" step="1"
+          pattern="\d+">
+      </div>
+
+      <div class="mb-3">
+        <label for="linhaOnibus" class="form-label">Qual a linha do ônibus?</label>
+        <select id="linhaOnibus" class="form-select" required>
+          <option value="">Selecione</option>
+          <!-- Linhas da SMTT -->
+          <option>202 - Caratatiua / Rua da Paz</option>
+          <option>204 - Alemanha / Deodoro</option>
+          <option>205 - Bom Milagre / Rua da Paz</option>
+          <option>206 - Liberdade / Deodoro</option>
+          <option>212 - Vila dos Nobres / Monte Castelo</option>
+          <option>301 - Sá Viana / Deodoro</option>
+          <option>307 - Alto da Esperança / Deodoro</option>
+          <option>314 - Vila Embratel / Deodoro</option>
+          <option>406 - Altos do Calhau / São Francisco</option>
+          <option>604 - Santo Antônio / Deodoro</option>
+          <option>605 - Vera Cruz / Santa Cruz</option>
+          <option>607 - Coheb / Cerâmica</option>
+          <option>608 - Vila Palmeira / Deodoro</option>
+          <option>610 - CEMA / DETRAN / João Paulo</option>
+          <option>611 - Circular Radional</option>
+          <option>612 - Coroadinho / Bom Jesus</option>
+          <option>613 - Coheb / Filipinho</option>
+          <option>617 - Coroadinho / Vila Conceição</option>
+          <option>901 - IPEM São Cristóvão / João de Deus / Alemanha</option>
+          <option>913 - Vila Lobão / João Paulo</option>
+          <option>A095 - Forquilha / Chácara Itapiracó / Terminal Cohab</option>
+          <option>A095 - Forquilha / Terminal Cohab</option>
+          <option>A306 - Luiz Bacelar / Argola e Tambor / Terminal Praia Grande</option>
+          <option>A306 - Luiz Bacelar / Terminal Praia Grande</option>
+          <option>A311 - Campus / Terminal Praia Grande</option>
+          <option>A313 - Tamancão / Terminal Praia Grande</option>
+          <option>A316 - Vila São Luís / Terminal Praia Grande</option>
+          <option>A321 - Sá Viana / Terminal Praia Grande</option>
+          <option>A327 - Residencial Piancó / Terminal Praia Grande</option>
+          <option>A328 - Residencial Paraíso / Direto Terminal</option>
+          <option>A331 - Arraial / Terminal Distrito</option>
+          <option>A332 - Itapera / Terminal Distrito</option>
+          <option>A333 - Igaraú / Terminal Distrito</option>
+          <option>A334 - Estiva / Terminal Distrito</option>
+          <option>A335 - Rio Grande / Terminal Distrito</option>
+          <option>A336 - Vila Maracujá / Terminal Distrito</option>
+          <option>A338 - Coqueiro / Terminal Distrito</option>
+          <option>A339 - Tinaí / Cinturão Verde / Terminal Distrito</option>
+          <option>A341 - Morada do Sol / Amendoeiras / Terminal Distrito</option>
+          <option>A342 - Quebra Pote / Terminal Distrito</option>
+          <option>A344 - Argola e Tambor / Terminal Praia Grande</option>
+          <option>A344 - Cidade Nova / Argola e Tambor / Terminal Praia Grande</option>
+          <option>A350 - Ribeira / Terminal Distrito</option>
+          <option>A401 - Península / Lagoa / Terminal Praia Grande</option>
+          <option>A401 - Península / Lagoa da Jansen / Terminal Praia Grande</option>
+          <option>A401 - Península / Terminal Praia Grande</option>
+          <option>A409 - Lagoa / Península / Terminal Cohama</option>
+          <option>A409 - Lagoa da Jansen / Península / Terminal Cohama</option>
+          <option>A409 - Península / Terminal Cohama</option>
+          <option>A552 - Residencial Primavera / Terminal Cohama</option>
+          <option>A553 - Recanto Fialho / Terminal Cohama</option>
+          <option>A554 - Pedra Caída / Terminal Cohama</option>
+          <option>A555 - Recanto dos Vinhais / Terminal Cohama</option>
+          <option>A555 - Recanto Vinhais / Terminal Cohama</option>
+          <option>A556 - Santa Cruz / Bequimão / Terminal Cohama</option>
+          <option>A557 - Aririzal / Terminal Cohama</option>
+          <option>A558 - Vivendas do Turu / Terminal Cohama</option>
+          <option>A559 - Divineia / Terminal Cohama / Mário Andreazza</option>
+          <option>A580 - Turu / Terminal Cohama</option>
+          <option>A601 - Coroadinho / Terminal Praia Grande</option>
+          <option>A607 - Coheb / Cerâmica / Terminal Cohama</option>
+          <option>A615 - Primavera / Bom Jesus / Terminal Praia Grande</option>
+          <option>A661 - Janaína / Terminal São Cristóvão</option>
+          <option>A663 - Vila Cascavel / Terminal São Cristóvão</option>
+          <option>A666 - Cidade Olímpica / Terminal São Cristóvão</option>
+          <option>A667 - Parque dos Sabiás / Terminal São Cristóvão</option>
+          <option>A669 - Alexandra Tavares / Terminal São Cristóvão</option>
+          <option>A671 - Tibiri / Terminal São Cristóvão</option>
+          <option>A673 - Recanto Verde / Vila Itamar / Terminal Cohab</option>
+          <option>A674 - Cajupe / Terminal São Cristóvão</option>
+          <option>A676 - Santa Bárbara / Terminal São Cristóvão</option>
+          <option>A677 - Mato Grosso / Tajipuru / Terminal São Cristóvão</option>
+          <option>A679 - Tajaçuaba / Terminal São Cristóvão via Santa Bárbara</option>
+          <option>A681 - Cajupary / Residencial Nova Vida / Terminal São Cristóvão</option>
+          <option>A682 - Vila Vitória / Terminal São Cristóvão</option>
+          <option>A684 - Santa Clara / Terminal São Cristóvão</option>
+          <option>A685 - Residencial Nestor / Terminal São Cristóvão</option>
+          <option>A688 - Residencial Tiradentes / Terminal São Cristóvão</option>
+          <option>A691 - Residencial Valean / Terminal São Cristóvão</option>
+          <option>A692 - Ivaldo Rodrigues / Terminal São Cristóvão</option>
+          <option>A694 - Jasmins / Eco Tajaçuaba / Terminal São Cristóvão</option>
+          <option>A694 - Jasmins / Terminal São Cristóvão</option>
+          <option>A695 - Pontal da Ilha / Terminal São Cristóvão</option>
+          <option>A696 - Vila Esperança / Terminal São Cristóvão / Terminal Cohab</option>
+          <option>A697 - Recanto dos Pássaros / Terminal São Cristóvão</option>
+          <option>A699 - Vila Aparecida / Terminal São Cristóvão / Terminal Cohab</option>
+          <option>A711 - Vila Luizão / Terminal Cohama</option>
+          <option>A886 - Habitacional Turu / Terminal Cohab</option>
+          <option>A891 - Isabel Cafeteira / Aurora / Terminal Cohab</option>
+          <option>A893 - Vila Luizão / Terminal Cohab</option>
+          <option>A897 - Ipem Turu / Terminal Cohab</option>
+          <option>C080 - Rodoviária / São Francisco</option>
+          <option>C087 - Circular 1 / Cohatrac / São Francisco</option>
+          <option>C088 - Circular 2 / Cohatrac / João Paulo</option>
+          <option>T005 - Pedrinhas / Terminal Praia Grande</option>
+          <option>T012 - Vila Nova República / Rodoviária</option>
+          <option>T015 - Porto Grande / Terminal Praia Grande</option>
+          <option>T016 - Vila Maranhão / Terminal Praia Grande</option>
+          <option>T019 - Cajueiro / Terminal Praia Grande</option>
+          <option>T020 - Vila Itamar / Rodoviária</option>
+          <option>T023 - Vila Funil / Bandeira Tribuzi</option>
+          <option>T028 - Rio dos Cachorros / Terminal Praia Grande</option>
+          <option>T031 - Estiva / Mercado Central</option>
+          <option>T032 - Coqueiro / Mercado Central</option>
+          <option>T033 - Morada do Sol / Amendoeiras / Terminal Praia Grande</option>
+          <option>T034 - Quebra Pote / João Paulo</option>
+          <option>T035 - Ribeira / Ipase via Terminais</option>
+          <option>T036 - Maracanã / Terminal Praia Grande via Terminal Distrito</option>
+          <option>T037 - Vila Sarney / Rodoviária</option>
+          <option>T038 - Ribeira / Rodoviária / São Francisco</option>
+          <option>T039 - Vila Sarney / Africanos</option>
+          <option>T042 - Cidade Olímpica 02 / São Francisco</option>
+          <option>T042 - Cidade Olímpica 02 / São Francisco / Bandeira Tribuzi</option>
+          <option>T043 - Cidade Operária 101 / São Francisco</option>
+          <option>T047 - Cidade Olímpica 02 / Ipase</option>
+          <option>T049 - Cidade Olímpica 02 / Rodoviária</option>
+          <option>T051 - Cohama / São Cristóvão / Holandeses</option>
+          <option>T052 - Cohama</option>
+          <option>T053 - Vinhais / Ipase</option>
+          <option>T054 - Vicente Fialho</option>
+          <option>T056 - Santa Rosa / São Francisco</option>
+          <option>T057 - Bequimão / Ipase</option>
+          <option>T058 - Bequimão / São Francisco</option>
+          <option>T059 - Divineia / Shopping São Luís</option>
+          <option>T060 - São Bernardo / João de Deus</option>
+          <option>T061 - Santa Clara / João Paulo</option>
+          <option>T062 - Socorrão 2 / Rodoviária</option>
+          <option>T065 - São Raimundo / Bandeira Tribuzi</option>
+          <option>T066 - São Raimundo / Rodoviária</option>
+          <option>T067 - São Raimundo / João Paulo</option>
+          <option>T070 - UEMA / Ipase</option>
+          <option>T071 - Janaína - Riod / Africanos</option>
+          <option>T072 - Cidade Operária 205 / São Francisco</option>
+          <option>T073 - Tibiri / Terminal Praia Grande</option>
+          <option>T074 - Vila Esperança / Rodoviária</option>
+          <option>T075 - José Reinaldo Tavares / Jd. América / Rodoviária</option>
+          <option>T076 - São Raimundo / São Francisco</option>
+          <option>T077 - Cidade Olímpica 01 / São Francisco</option>
+          <option>T077 - Cidade Olímpica 01 / São Francisco / Bandeira Tribuzi</option>
+          <option>T078 - Cidade Olímpica 01 / Ipase</option>
+          <option>T079 - Cidade Olímpica 01 / Rodoviária</option>
+          <option>T081 - Cohatrac / Rodoviária</option>
+          <option>T082 - Cohatrac 3 / Ipase</option>
+          <option>T083 - Cohatrac / Bandeira Tribuzi</option>
+          <option>T084 - Cohatrac 4 / João Paulo</option>
+          <option>T086 - Cohatrac / São Francisco</option>
+          <option>T090 - Terminais via BR-135</option>
+          <option>T092 - Habitacional Turu</option>
+          <option>T207 - Bairro de Fátima / Parque Amazonas</option>
+          <option>T209 - Parque dos Nobres / Terminal Praia Grande</option>
+          <option>T215 - Cohatrac (Corujão)</option>
+          <option>T302 - Itaqui / Terminal Praia Grande</option>
+          <option>T303 - Anjo da Guarda / Terminal Praia Grande / Deodoro</option>
+          <option>T304 - Fumacê / Terminal Praia Grande / Deodoro</option>
+          <option>T309 - Vila Isabel / Terminal Praia Grande / Deodoro</option>
+          <option>T310 - Gancharia / Terminal Praia Grande / Deodoro</option>
+          <option>T312 - Gapara / Deodoro / Terminal Praia Grande</option>
+          <option>T320 - Residencial Paraíso / Bandeira Tribuzi / Renascença</option>
+          <option>T320 - Residencial Paraíso / Bandeira Tribuzi / Shopping Tropical</option>
+          <option>T324 - Sol Nascente / São Mateus / Terminal Praia Grande / Deodoro</option>
+          <option>T324 - Vila Nova / Sol Nascente / Terminal Praia Grande / Deodoro</option>
+          <option>T325 - Ilha da Paz / Vila Ariri / Terminal Praia Grande / Deodoro</option>
+          <option>T329 - Maracanã / Terminal Praia Grande via Bacanga</option>
+          <option>T337 - Vila Collier / Terminal Praia Grande</option>
+          <option>T343 - Terminal Distrito / Vila Collier / Mercado Central</option>
+          <option>T343 - Terminal Distrito / Vila Collier / Terminal Praia Grande</option>
+          <option>T345 - Santa Clara (Corujão)</option>
+          <option>T365 - São Raimundo (Corujão)</option>
+          <option>T402 - Ponta D'Areia</option>
+          <option>T402 - Terminal Cohama / Ponta D'Areia</option>
+          <option>T403 - Calhau / Litorânea</option>
+          <option>T407 - Calhau / Bandeira Tribuzi</option>
+          <option>T408 - Vila Nova / Calhau</option>
+          <option>T410 - Rapidão - Litorânea / Terminal Praia Grande</option>
+          <option>T410 - Rapidão - Olho D'Água / Litorânea / Terminal Praia Grande</option>
+          <option>T430 - Rapidão - Vila Luizão / Terminal Praia Grande</option>
+          <option>T435 - Calhau / Litorânea (Corujão)</option>
+          <option>T440 - Rapidão - Ribeira / Terminal Praia Grande</option>
+          <option>T450 - Rapidão - Holandeses / Terminal Cohama</option>
+          <option>T450 - Rapidão - Terminal Cohama / Terminal Praia Grande</option>
+          <option>T501 - Angelim / Terminal Praia Grande</option>
+          <option>T504 - Pão de Açúcar / Terminal Praia Grande</option>
+          <option>T506 - Vinhais / São Francisco</option>
+          <option>T551 - Alto Angelim / São Francisco / Ipase</option>
+          <option>T609 - Parque Timbiras / Bom Jesus</option>
+          <option>T621 - Jomar Moraes / Vila dos Nobres / Terminal Praia Grande</option>
+          <option>T701 - Olho D'Água / João Paulo</option>
+          <option>T703 - Ipem Turu / Alemanha</option>
+          <option>T705 - Sol e Mar</option>
+          <option>T706 - Divineia / João Paulo</option>
+          <option>T706 - Divineia / Kennedy</option>
+          <option>T720 - Vila Luizão / Holandeses</option>
+          <option>T814 - Piquizeiro / Terminal Praia Grande</option>
+          <option>T907 - Cidade Operária / Socorrão 2 / Rodoviária</option>
+
+          <!-- Linhas da MOB -->
+          <option>956 - Raposa / Holandeses</option>
+          <option>958 - Ribamar / Rodoviária</option>
+          <option>966 - Ribamar / Deodoro / São Francisco</option>
+          <option>968 - Ribamar / Bandeira Tribuzi / João Paulo</option>
+          <option>973 - Raposa / Ribamar</option>
+          <option>A582 - Alto do Turu / Terminal Cohama</option>
+          <option>A585 - Parque Jair / Terminal Cohama</option>
+          <option>A586 - Alonso Costa / Parque Araçagy / Terminal Cohama</option>
+          <option>A664 - J. Lima / Terminal São Cristóvão / Terminal Cohab</option>
+          <option>A665 - Kiola / Terminal São Cristóvão / Terminal Cohab</option>
+          <option>A668 - Maiobinha / Terminal São Cristóvão / Terminal Cohab</option>
+          <option>A672 - Santa Maria / Terminal São Cristóvão</option>
+          <option>A678 - Juçatuba / Bom Jardim / Terminal São Cristóvão</option>
+          <option>A683 - Mata / Residencial Nova Terra / Terminal São Cristóvão</option>
+          <option>A687 - Guarapiranga / Terminal São Cristóvão</option>
+          <option>A881 - Parque Vitória / Terminal Cohab</option>
+          <option>A882 - Planalto Anil / Itapiracó / Terminal Cohab</option>
+          <option>A882 - Planalto Anil / Nova Aurora / Itapiracó / Terminal Cohab</option>
+          <option>A883 - Alto do Turu / Terminal Cohab</option>
+          <option>A887 - Parque Jair / Estrada da Maioba / Terminal Cohab</option>
+          <option>A895 - Alonso Costa / Parque Araçagy / Terminal Cohab</option>
+          <option>A896 - Bom Jardim / Terminal Cohab</option>
+          <option>A947 - Cidade Alta / Portal do Paço / Terminal Cohab</option>
+          <option>A949 - Village dos Pássaros / Ubatuba / Terminal Cohab</option>
+          <option>A952 - Residencial Turiúba / Terminal São Cristóvão</option>
+          <option>A957 - Iguaíba / Terminal Cohama</option>
+          <option>A960 - Estrada da Mata / Socorrão 2 / Terminal Cohab</option>
+          <option>A961 - Itapeua / Cumbique / Terminal Cohab</option>
+          <option>A963 - Cidade Verde / Vila do Povo / Terminal Cohab</option>
+          <option>A963 - Novo Horizonte / Vila do Povo / Terminal Cohab</option>
+          <option>A964 - Vila São Luís / Socorrão 2 / Terminal Cohab</option>
+          <option>A965 - Raposa / Jussara / Terminal Cohab</option>
+          <option>A969 - Residencial Nova Terra / Socorrão 2 / Terminal São Cristóvão</option>
+          <option>A971 - Sítio Natureza / Terminal Cohab</option>
+          <option>A975 - Iguaíba / Terminal Cohab</option>
+          <option>A976 - Araçagy / Terminal Cohab</option>
+          <option>A977 - Residencial Pirâmide / Terminal Cohab</option>
+          <option>A978 - Raposa / Terminal Cohama</option>
+          <option>A981 - Residencial Turiúba / Terminal Cohab</option>
+          <option>A983 - Praia de Boa Viagem / Terminal Cohab</option>
+          <option>A984 - Paranã / Terminal Cohab</option>
+          <option>A986 - Maioba / Porto / Terminal Cohab</option>
+          <option>A987 - Maioba / Pindoba / Terminal Cohab</option>
+          <option>A989 - Mojó / Mercês / Terminal Cohab</option>
+          <option>A989 - Mojó / Terminal Cohab</option>
+          <option>A989B - Mercês / Terminal Cohab</option>
+          <option>A991 - Tambaú / Terminal Cohab</option>
+          <option>A992 - Sítio Grande L2 / Eugênio Pereira / Terminal Cohab</option>
+          <option>A993 - Upaon Açu L2 / Terminal Cohab</option>
+          <option>A994 - Lima Verde / Terminal Cohab</option>
+          <option>A994 - Novo Paço / Terminal Cohab</option>
+          <option>A994B - Altos do Laranjal / Novo Paço / Terminal Cohab</option>
+          <option>A995 - Residencial Nova Terra / Vila Sarney Filho / Terminal Cohab</option>
+          <option>A996 - Ribamar / Terminal Cohab</option>
+          <option>A997 - Panaquatira / Terminal Cohab</option>
+          <option>T055 - Parque Vitória / Bandeira Tribuzi / São Francisco</option>
+          <option>T063 - Jd. Tropical / Santos Dumont</option>
+          <option>T064 - Jd. Tropical / São Francisco</option>
+          <option>T085 - Cohatrac / Jd. das Margaridas</option>
+          <option>T091 - Alvorada / Ipase</option>
+          <option>T097 - Parque Jair / João Paulo</option>
+          <option>T584 - Bom Jardim / Ipase / Shopping São Luís</option>
+          <option>T584 - Bom Jardim / Terminal Cohama / Ipase / Shopping São Luís</option>
+          <option>T709 - Parque Vitória / Alemanha</option>
+          <option>T714 - Alonso Costa / Parque Araçagy / Holandeses</option>
+          <option>T719 - Alonso Costa / Vila Luizão / João Paulo</option>
+          <option>T719 - Parque Araçagy / Vila Luizão / João Paulo</option>
+          <option>T955 - Cidade Verde / São Francisco via Terminais</option>
+          <option>T970 - Maiobão / João Paulo</option>
+          <option>T972 - Vila São José L2 / Rodoviária</option>
+          <option>T974 - Vila Cafeteira / João Paulo</option>
+          <option>T979 - Raposa / Araçagy / João Paulo</option>
+          <option>T980 - Maiobão / São Francisco</option>
+          <option>T982 - Vila São José L1 / São Francisco / Bandeira Tribuzi</option>
+          <option>T984 - Paranã / São Francisco</option>
+          <option>T988 - Residencial Nova Terra / Vila Sarney Filho / João Paulo</option>
+        </select>
+      </div>
+
+      <!-- Problemas enfrentados -->
+      <div class="mb-3">
+        <label class="form-label">Quais problemas você enfrentou?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Atraso excessivo" id="problema1">
+          <label class="form-check-label" for="problema1">Atraso excessivo</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Ônibus lotado" id="problema2">
+          <label class="form-check-label" for="problema2">Ônibus lotado</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Falta de acessibilidade" id="problema3">
+          <label class="form-check-label" for="problema3">Falta de acessibilidade</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Ar-condicionado quebrado" id="problema4">
+          <label class="form-check-label" for="problema4">Ar-condicionado quebrado</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Veículo sujo ou mal conservado" id="problema5">
+          <label class="form-check-label" for="problema5">Veículo sujo ou mal conservado</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Má conduta do motorista" id="problema6">
+          <label class="form-check-label" for="problema6">Má conduta do motorista</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Mudança inesperada no trajeto" id="problema7">
+          <label class="form-check-label" for="problema7">Mudança inesperada no trajeto</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descreva melhor aqui seu problema (Opcional)</label>
+        <textarea class="form-control" id="descricao" rows="3" maxlength="300"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="avaliacaoViagem" class="form-label">Como você avalia sua viagem?</label>
+        <input type="range" class="form-range" min="0" max="5" step="1" id="avaliacaoViagem">
+        <div class="d-flex justify-content-between px-1">
+          <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="avaliacaoSeguranca" class="form-label">Como você avalia a segurança da viagem?</label>
+        <input type="range" class="form-range" min="0" max="5" step="1" id="avaliacaoSeguranca">
+        <div class="d-flex justify-content-between px-1">
+          <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="sugestao" class="form-label">Alguma sugestão de melhoria?</label>
+        <textarea class="form-control" id="sugestao" rows="3" maxlength="300"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Enviar Feedback</button>
+      <div class="mt-3 text-success" id="mensagem"></div>
+    </form>
+  </div>
+
+  <!-- Modal com menssagem de confirmação -->
+  <div class="modal fade" id="sucessoModal" tabindex="-1" aria-labelledby="sucessoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sucessoModalLabel">Enviado com sucesso!</h5>
+        </div>
+        <div class="modal-body">
+          Obrigado pelo seu feedback. Ele foi encaminhado para as empresas responsáveis.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    body {
+      background-color: var(--bs-body-bg);
+      color: var(--bs-body-color);
+    }
+
+    .form-container {
+      max-width: 720px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .logo {
+      max-width: 180px;
+      display: block;
+      margin: 1rem auto;
+    }
+  </style>
+</body>
+
+</html>
