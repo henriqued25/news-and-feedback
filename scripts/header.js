@@ -1,4 +1,4 @@
-const singleTicket = document.querySelector(".button-home");
+const index = document.querySelector(".button-home");
 const busCode = document.querySelector('.button-busCode');
 const busFare = document.querySelector('.button-busFare');
 const accessInformation = document.querySelector('.button-information');
@@ -11,9 +11,9 @@ function removeClass() {
 
 const pagAtual = window.location.pathname.split('/').pop();
 switch (pagAtual) {
-    case "SingleTicket.html":
+    case "index.html":
         removeClass()
-        singleTicket.classList.add("border-bottom", "border-primary", "border-3");
+        index.classList.add("border-bottom", "border-primary", "border-3");
         break;
     case "BusCode.html":
         removeClass()
