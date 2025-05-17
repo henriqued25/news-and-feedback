@@ -13,6 +13,9 @@
 
   <script src="scripts/feedback.js" defer> </script>
   <link rel="icon" type="image/png" href="assets/logo/favicon.ico">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
   <title>Feedback dos Coletivos - Connectilha</title>
 </head>
 
@@ -374,6 +377,23 @@
       <div class="mt-3 text-success" id="mensagem"></div>
     </form>
   </div>
+
+  <!-- Modal com menssagem de loading -->
+    <div class="modal fade" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="loadingModalLabel">Enviando Feedback...</h5>
+        </div>
+        <div class="modal-body text-center">
+            <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Carregando...</span>
+            </div>
+            <p class="mt-2">Por favor, aguarde.</p>
+        </div>
+        </div>
+    </div>
+    </div>
 
   <!-- Modal com menssagem de confirmação -->
   <div class="modal fade" id="sucessoModal" tabindex="-1" aria-labelledby="sucessoModalLabel" aria-hidden="true">
