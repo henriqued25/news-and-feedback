@@ -17,6 +17,6 @@ A tela de notícias conta com diversas outras páginas organizadas no `header`, 
 - `Bootstrap:` Framework de CSS que facilita a criação de layouts responsivos e modernos, proporcionando componentes pré-definidos para otimizar o desenvolvimento;
 
 # 🛠️ Abrir e rodar o projeto
-Para abrir e rodar o projeto, basta abrir o aquivo *"SingleTicket.html"* no navegador, abri-lo com a extensão Live Server do Visual Studio Code ou abri-lo a partir [deste link](#).
+Para abrir e rodar o projeto, basta abrir o aquivo *"index.html"* no navegador, abri-lo com a extensão Live Server do Visual Studio Code ou abri-lo a partir [deste link](https://news-and-feedback.vercel.app/index.html).
 
 Mais atualizações virão em breve.
