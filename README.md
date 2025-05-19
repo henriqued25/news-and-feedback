@@ -15,6 +15,7 @@ A tela de notícias conta com diversas outras páginas organizadas no `header`, 
 - `CSS:` Responsável pela estilização da interface, garantindo um design harmonioso e responsivo em diferentes dispositivos;
 - `JavaScript:`Utilizado para adicionar interatividade e dinamismo à página, permitindo ações como manipulação de elementos e respostas a eventos do usuário;
 - `Bootstrap:` Framework de CSS que facilita a criação de layouts responsivos e modernos, proporcionando componentes pré-definidos para otimizar o desenvolvimento;
+- `Vercel` Plataforma de deploy que garante alta performance e escalabilidade para hospedagem eficiente da aplicação.
 
 # ⚙️ API Utilizada  
 Este projeto conta com uma API desenvolvida para facilitar a comunicação entre o cliente e o servidor, garantindo uma integração eficiente com o banco de dados. Seu código-fonte e documentação podem ser acessados no repositório oficial: [⚙️ API Connectilha](https://github.com/henriqued25/api-connectilha).
