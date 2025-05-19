@@ -16,6 +16,9 @@ A tela de notícias conta com diversas outras páginas organizadas no `header`, 
 - `JavaScript:`Utilizado para adicionar interatividade e dinamismo à página, permitindo ações como manipulação de elementos e respostas a eventos do usuário;
 - `Bootstrap:` Framework de CSS que facilita a criação de layouts responsivos e modernos, proporcionando componentes pré-definidos para otimizar o desenvolvimento;
 
+# ⚙️ API Utilizada  
+Este projeto conta com uma API desenvolvida para facilitar a comunicação entre o cliente e o servidor, garantindo uma integração eficiente com o banco de dados. Seu código-fonte e documentação podem ser acessados no repositório oficial: [⚙️ API Connectilha](https://github.com/henriqued25/api-connectilha).
+
 # 🛠️ Abrir e rodar o projeto
 Para abrir e rodar o projeto, basta abrir o aquivo *"index.html"* no navegador, abri-lo com a extensão Live Server do Visual Studio Code ou abri-lo a partir [deste link](https://news-and-feedback.vercel.app/index.html).
 
