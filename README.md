@@ -1,5 +1,5 @@
 
-# Sistema de Democratização a informação e feedback - ConnectIlha
+# Sistema de Democratização a Informação e Geração de Feedback - ConnectIlha
 O sistema ConnectIlha foi projetado para o desafio 4 do programa Trilhas INOVA, com o objetivo de criar uma página web que centralize as informações básicas do transporte público de São Luís, em específico, os ônibus e fornecesse uma forma simplificada e acessível de fazer feedbacks dos coletivos a partir do próprio celular ou por meio de um computador, possibilitando uma experiência ágil e informativa. Dessa forma, o ConnectIlha não apenas facilita o acesso a dados essenciais sobre o transporte público, mas também fortalece o direito da população à fiscalização, promovendo transparência e melhoria contínua na mobilidade urbana.
 
 ![Página inicial do site](https://github.com/user-attachments/assets/46e5d743-f8fd-4546-94e7-4334b8fdb3c7)
